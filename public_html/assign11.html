@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Buy Here</title>
+   <link rel="stylesheet" type="text/css" href="assign11.css">
+</head>
+<body>
+   <header>Order Your Most Important Groceries Online</header>
+
+   <form onsubmit="return validate();" onload="check();" onreset="reset();" name="myForm" method = "get" action="assign10.php" id="purchaseForm">
+      <div>
+         <label>First Name:</label>
+         <input id="fNameVald" class="textBoxBackground" name="first" type="text" placeholder="John" required/>
+
+         <label>Last Name:</label>
+         <input id="lNameVald" class="textBoxBackground" name="last" type="text" placeholder="Smith" required>
+      </div>
+
+      <div>
+         <label>Address: </label>
+         <textarea name="address" rows="2" cols="50" placeholder="525 S Center St, Rexburg, ID 83460" title="Please enter your address"  id="addressID" required></textarea>
+         <p class="error" id="checkAd"></p>
+      </div>
+
+      <div>
+         <label>Phone Number: </label>
+         <input id="phoneVald" name="phoneNumber" type="text" placeholder="208-497-3657" onchange="phoneV();" title="Must follow the format: XXX-XXX-XXXX" required>
+         <p class="error" id="checkPN"></p>
+      </div>
+
+   <div class="padding">
+      <p style="text-align: center">Items to Purchase</p>
+      <table>
+         <tr>
+            <th>Item</th>
+            <th>Cost</th>
+            <th>Buy</th>
+         </tr>
+
+         <tr>
+            <td>Milk</td>
+            <td>$2.50</td>
+            <td><input name="ChocolateMilk" type="checkbox" id="item_1" onclick="check();" value="2.50"></td>
+         </tr>
+
+         <tr>
+            <td>Cookies</td>
+            <td>$4.50</td>
+            <td><input name="Cookies" type="checkbox" id="item_2" onclick="check();" value="4.50"></td>
+         </tr>
+
+         <tr>
+            <td>Pizza</td>
+            <td>$6.50</td>
+            <td><input name="Pizza" type="checkbox" id="item_3" onclick="check();" value="6.50"></td>
+         </tr>
+
+         <tr>
+            <td>Soup Packets(15-Pack)</td>
+            <td>$21.00</td>
+            <td><input name="Soup Packets" type="checkbox" id="item_4" onclick="check();" value="21.00"></td>
+         </tr>
+
+         <tr>
+            <td>Redbull(12-Pack)</td>
+            <td>$25.50</td>
+            <td><input name="Redbull" type="checkbox" id="item_5" onclick="check();" value="25.50"></td>
+         </tr>
+
+         <tr>
+            <td>Steak</td>
+            <td>$9.00</td>
+            <td><input name="Steak" type="checkbox" id="item_6" onclick="check();" value="9.00"></td>
+         </tr>
+      </table>
+      <p class="error" id="purchaseError"></p>
+      <p>Total: $<span id="calculate">0.00</span></p>
+   </div>
+
+   <div>
+      <p>Credit Card Type</p>
+         <label>Visa: </label>
+         <input name="creditCard" type="radio" value="Visa" required>
+
+         <label>Mastercard: </label>
+         <input name="creditCard" type="radio" value="Mastercard">
+
+         <label>American Express: </label>
+         <input name="creditCard" type="radio" value="American Express">
+   </div>
+
+   <div>
+      <label>Credit Card Number:</label>
+      <input class="textBoxBackground" name="creditNumber" type="text" placeholder="1234567891234567" id="CCN" onchange="ccnV();" title="16 digit number" required>
+      <p class="error" id="checkCCN" onchange="check();"></p>
+   </div>
+
+   <div>
+      <label>Credit Card Expiration Date: </label>
+         <select name="month">
+            <option name="month" value="January">01</option>
+            <option name="month" value="February">02</option>
+            <option name="month" value="March">03</option>
+            <option name="month" value="April">04</option>
+            <option name="month" value="May">05</option>
+            <option name="month" value="June">06</option>
+            <option name="month" value="July">07</option>
+            <option name="month" value="August">08</option>
+            <option name="month" value="September">09</option>
+            <option name="month" value="October">10</option>
+            <option name="month" value="November">11</option>
+            <option name="month" value="December">12</option>
+         </select>
+         <select name="year">
+            <option name="year" value="2018">2019</option>
+            <option name="year" value="2019">2020</option>
+            <option name="year" value="2020">2021</option>
+            <option name="year" value="2021">2022</option>
+            <option name="year" value="2022">2023</option>
+            <option name="year" value="2023">2024</option>
+            <option name="year" value="2024">2025</option>
+            <option name="year" value="2025">2026</option>
+            <option name="year" value="2026">2027</option>
+          </select>
+   </div>
+
+   <div>
+      <input class="button" id="submitOrder" type="submit" value="Submit Order">
+
+      <input class="button" id="rButton" type="reset" value="Reset Form">
+   </div>
+
+   </form>
+
+   <script type="text/javascript" src="assign11.js"></script>
+</body>
+</html>

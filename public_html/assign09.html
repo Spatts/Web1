@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Assign09</title>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="stylesheet" type="text/css" href="assign08.css">
+</head>
+<body>
+<h1>10 Largest Cities</h1>
+<textarea id="list" rows="15" cols="50"></textarea>
+<div>
+      <input type="button" onclick="loadDoc('http://157.201.194.254/~cs213/usa.txt', myFunction)" value="USA">
+      <input type="button" onclick="loadDoc('http://157.201.194.254/~cs213/canada.txt', myFunction)" value="Canada">
+      <input type="button" onclick="loadDoc('http://157.201.194.254/~cs213/mexico.txt', myFunction)" value="Mexico">
+      <input type="button" onclick="loadDoc('http://157.201.194.254/~cs213/russia.txt', myFunction)" value="Russia">
+   </div>
+   <br/>
+   <br/>
+   <br/>
+   <div>
+      <p id="student"></p>
+      <div>
+      <input type="button" onclick="loadDocStudent(getFileName(), myFunction1)" value="StudentList">
+         Filename:
+         <textarea rows="4" cols="50" id="fileNameStudent" onchange="getFileName()"></textarea> 
+      </div>
+   </div>
+<script type="text/javascript" src="assign09.js"></script>
+<script type="text/javascript" src="assign09S.js"></script>
+</body>
+</html>

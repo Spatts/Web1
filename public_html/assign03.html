@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Mitch Patterson's Enhanced Home Page</title>
+    <style>
+      h1 {
+      font-size: 6;
+      text-align:center;
+      }
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      table {
+        width: 60%
+      }
+      th, td {
+      padding: 3px;
+      }
+      p.Name {
+      text-align:center;
+      }
+      h3 {
+      font-size: 4;
+      text-align:center;
+      }
+      h5{
+        text-indent: 50px;
+      }
+      div.tab {
+        text-indent: 50px;
+        text-align: center;
+      }
+      footer {
+        text-align: center;
+        font-size: 10px;
+      }
+      u {
+        text-decoration: underline;
+        font-style: italic;
+      }
+      * {
+        box-sizing: border-box;
+        }
+
+      .column {
+              float: right;
+              width: 50%;
+              padding: 5px;
+
+              }
+      .row::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                  }
+      form{
+          margin: 0 30%;
+          border-radius: 5px;
+          background-color: lightgrey;
+          text-align: center;
+          }
+      textarea{
+    </style>
+    </head>
+  <body>
+    <a id="top"></a>
+    <h1><strong>Welcome to Mitch Patterson's Home Page</strong></h1>
+    <p class="Name">Steven Mitch Patterson - Software Engineer - Nevada </p>
+    <a href="#bottom" style="float: right; font-size: 10px">Down</a>
+    <a href="/~spatterson/index.html">Assignments</a> 
+    <hr>
+    <br>
+    <div style="text-align: center;">
+    <div class="row">
+      <div class="column">
+        <a href="https://www.lds.org/?lang=eng"><img src="Temple.jpg" alt="Temple" style="width: 66%"> </a>
+      </div>
+      <div class="column">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img style="transform: rotate(90deg); width: 100%" src="mitch.jpg" alt="Mitch">
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="tab">
+    <h5>HELLO</h5>  
+    <p> 
+    The name is Mitch Patterson. I was born in North Carolina and raised in Nevada. I am 4yr's married and have a daughter on the way. I am currently 28yr's old and have 4 siblings. I love sports and spending time with friends. I read a lot of books. <u>The Stormlight Archive</u> series is one of my favorite book series I have read.
+    </p>
+    </div>
+        <blockquote style="font-family: cursive">
+          <i>Ultimately we are all dead men. Sadly, we cannot choose how, but we can decide how we meet that end, in order that we are remembered as men..</i> <br>
+          <b>-Gladiator</b>
+        </blockquote>
+<h3>Class Schedule</h3>
+<div style="text-align: center;">
+<a href="http://www.byui.edu">BYUI Homepage</a>
+</div>
+<table style="margin: auto">
+  <tr>
+    <th>Course #</th>
+    <th>Description</th>
+    <th>Sec #</th>
+    <th>Time</th>
+    <th>Location</th>
+    </tr>
+  <tr>
+    <td>CS 213</td>
+    <td>Web Engineering I</td>
+    <td>02</td>
+    <td>3:13 - 4:45 PM</td>
+    <td>STC/347</td>
+    </tr>
+  <tr>
+    <td>CS 235</td>
+    <td>Data Structures</td>
+    <td>02</td>
+    <td>11:30 AM - 12:30 PM</td>
+    <td>STC/231</td>
+    </tr>
+  <tr>
+    <td>CS 246</td>
+    <td>Software Design and Development</td>
+    <td>02</td>
+    <td>12:45 - 1:45 PM</td>
+    <td>STC/231</td>
+    </tr>
+  <tr>
+    <td>CS 308</td>
+    <td>Technical Communication</td>
+    <td>02</td>
+    <td>10:15 - 11:15 AM</td>
+    <td>STC/385</td>
+    </tr>
+  </table>
+  <br>
+  <br>
+<div>
+  <form>
+    First name:<br>
+    <input type="text" name="firstname"><br>
+    Last name:<br>
+    <input type="text" name="lastname"><br>
+    What's your gender?<br> 
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>  
+      <input type="radio" name="gender" value="What" > What?<br>
+      How cool are you?<br>
+      <select name="cars">
+        <option value="Cool">Cool</option>
+        <option value="Super Cool">Super Cool</option>
+        <option value="ICE COLD">ICE COLD</option>
+      </select><br><br>
+      <textarea name="message" rows="10" cols="30">
+        Describe your ideal pair of socks.
+      </textarea><br>
+      <input type="checkbox" name="Stuff" value="Me"> No one like me<br>
+      <input type="checkbox" name="Stuff" value="TLC" checked> I'm in need of some TLC<br>
+      <input type="checkbox" name="Stuff" value="Lonely"> I'm forever alone<br>
+      <br>
+      <input type="submit" value="Submit"><input type="reset" value="Reset">
+    </form>
+  </div>
+  <br>
+  <br>
+  <hr>
+  <a id="bottom"></a>
+    <footer>This is rock bottom......would you like to go <strong><a href="#top">up</a></strong></footer>
+</body>
+</html>

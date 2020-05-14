@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>University of Ramsay - Application</title>
+   <meta name="description" content="The University of Ramsay is a private,
+   four-year university that specializes in food."/>
+   <link rel="stylesheet" type="text/css" href="assign08.css">
+   <script type="text/javascript" src="assign08App.js"></script>
+</head>
+<body>
+   <img src="rlogo.jpg" alt="rlogo">
+   <header>
+      University of Ramsay
+   </header>
+   <div class="topnav" id="myTopnav">
+     <a href="/~spatterson/assign08.html" class="sidnavA">Home</a>
+     <a href="/~spatterson/assign08About.html" class="sidnavA">About</a>
+     <a href="/~spatterson/assign08App.html">Application</a>
+     <a href="/~spatterson/assign08Clubs.html" class="sidnavA">Clubs</a>
+   </div>
+   <p class="calander">Apply Now</p>
+   <form onsubmit="return validate();" onreset="reset();" name="myForm">
+      <div>
+         <label>First Name:</label>
+         <input id="fNameVald" class="textBoxBackground" name="first" type="text" placeholder="JJ" required/>
+      </div>
+      <div>
+         <label>Last Name:</label>
+         <input id="lNameVald" class="textBoxBackground" name="last" type="text" placeholder="Abrams" required>
+      </div>
+      <div>
+         <label for="username">Email:</label>
+         <input id="username" name="username" type="email" placeholder="email@Ramsay.com" required>
+      </div>
+      <div>
+         <label>Phone Number: </label>
+         <input id="phoneVald" name="phoneNumber" type="text" placeholder="111-111-1111" onchange="phoneV();" title="Must follow the format: XXX-XXX-XXXX" required>
+         <p class="error" id="checkPN"></p>
+      </div>
+      <div class="taWidth">
+         <div>
+            <label>Essay Question #1: What is the average air speed velocity of a laden swallow?</label>
+         </div>
+         <textarea name="address" rows="10" cols="60" placeholder="I love the University of Ramsay!" required></textarea>
+         <div>
+            <label>Essay Question #2: What dish do you wish to learn most and why?</label>
+         </div>
+         <textarea name="address" rows="10" cols="60" placeholder="I love the University of Ramsay!" required></textarea>
+      </div>
+      <div>
+         <input class="button" id="submitOrder" type="submit" value="Submit Application">
+        <input class="button" id="rButton" type="reset" value="Reset Application">
+      </div>
+   </form>
+   <footer class="footer">
+      <div>
+         <p>University of Ramsay</p>
+         <p>Call For Help| 999-999-9999</p>
+      </div>
+   </footer>
+<script>document.getElementById('rButton').addEventListener("click", reset);</script>
+</body>
+</html>

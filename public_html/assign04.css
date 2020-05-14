@@ -1,0 +1,31 @@
+body.a {
+	background-color: rgb(171, 167, 174);
+}
+h1 {
+	font-size: 45px;
+	text-align:center;
+	font-family: bookman;
+}
+h2 {
+	font-size: 40px;
+	font-family: garamond;
+	text-decoration: underline;
+
+}
+h3 {
+	font-size: 25px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+
+}
+form {
+margin: 0 30%;
+border-radius: 5px;
+background-color: lightgrey;
+text-align: center;
+}

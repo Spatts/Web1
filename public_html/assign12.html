@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Mileage Calculator</title>
+   <link rel="stylesheet" type="text/css" href="assign12.css">
+</head>
+<body>
+<h1>Mileage Calculator</h1>
+
+      <div>
+         <label>Start City:</label>
+         <input id="sCity" class="textBoxBackground" name="startCity" type="text" placeholder="Boise" onchange="cSCity();" required/>
+
+         <label>State:</label>
+         <input id="sState" class="textBoxBackground" name="startState" type="text" placeholder="ID" maxlength="2" size="2" onchange="cSState();" required>
+         <p class="error" id="checkSC"></p>
+         <p class="error" id="checkSS"></p>
+      </div>
+
+      <div>
+         <label>End City:</label>
+         <input id="eCity" class="textBoxBackground" name="endCity" type="text" placeholder="Seattle" onchange="cECity();" required/>
+
+         <label>State:</label>
+         <input id="eState" class="textBoxBackground" name="endState" type="text" placeholder="WA" maxlength="2" size="2" onchange="cEState();" required>
+         <p class="error" id="checkEC"></p>
+         <p class="error" id="checkES"></p>
+         <p class="error" id="checkForm"></p>
+      </div>
+
+      <div>
+         <input class="button" id="getMiles" type="button" value="Get Miles" onclick="validate();">
+
+         <input onclick="reset();" class="button" id="rButton" type="reset" value="Reset Form">
+      </div>
+
+   <div>
+      <p id="miles"><p>
+      <p id="tMode"><p>
+   </div>
+
+<script type="text/javascript" src="assign12.js"></script>
+</body>
+</html>

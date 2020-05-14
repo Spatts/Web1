@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Piano Festival</title>
+   <link rel="stylesheet" type="text/css" href="assign13.css">
+</head>
+<body onload="loadData('assign13.php', myFunction1)">
+<h1>Sign Up for the Piano Festival!</h1>
+<form>
+      <div>
+         Performance Type:
+         <label>Solo: </label>
+         <input id="solo1" name="performanceType" type="radio" value="Solo" onchange="duetMasterPiece();" onclick="radioDataP();" required>
+
+         <label>Duet: </label>
+         <input id="duetMasterInput1" name="performanceType" type="radio" value="Duet" onchange="duetMasterPiece();" onclick="radioDataP();">
+
+         <label>Concerto: </label>
+         <input id="concerto1" name="performanceType" type="radio" value="Concerto" onchange="duetMasterPiece();" onclick="radioDataP();">
+      </div>
+
+      <div>
+         <label>First Name:</label>
+         <input id="fName1" class="textBoxBackground" name="first" type="text" placeholder="Aaron" required/>
+         <label>Last Name:</label>
+         <input id="lName1" class="textBoxBackground" name="last" type="text" placeholder="Freeks" required>
+         <label>Student ID:</label>
+         <input class="textBoxBackground" name="studentID" type="text" placeholder="123456789" id="cstudentID" onchange="cSID();" title="9 digit number" required>
+         <p class="error" id="eSID"></p>
+      </div>
+
+      <div id="duetForm">
+         <label>First Name:</label>
+         <input id="fName2" class="textBoxBackground" name="firstDuet" type="text" placeholder="John" required/>
+
+         <label>Last Name:</label>
+         <input id="lName2" class="textBoxBackground" name="lastDuet" type="text" placeholder="Smith" required>
+         
+         <label>Student ID:</label>
+         <input class="textBoxBackground" name="studentIDDuet" type="text" placeholder="123456789" id="cstudentIDDuet" onchange="cSIDDuet();" title="9 digit number" required>
+         <p class="error" id="eSIDDuet"></p>
+      </div>
+
+      <div>
+         Skill Level:
+         <label>Beginner: </label>
+         <input id="beginner" name="skillLevelF" type="radio" value="beginner" onchange="radioDataS();" required>
+
+         <label>Intermediate: </label>
+         <input id="intermediate" name="skillLevelF" type="radio" value="intermediate" onchange="radioDataS();">
+
+         <label>Pre-Advanced: </label>
+         <input id="pre-advanced" name="skillLevelF" type="radio" value="pre-advanced" onchange="radioDataS();">
+
+         <label>Advanced: </label>
+         <input id="advanced" name="skillLevelF" type="radio" value="advanced" onchange="radioDataS();">
+      </div>
+
+      <div>
+         Instrument:
+         <label>Piano: </label>
+         <input id="piano" name="instrumentF" type="radio" value="piano" onchange="radioDataI();" required>
+
+         <label>Voice: </label>
+         <input id="voice" name="instrumentF" type="radio" value="voice" onchange="radioDataI();">
+
+         <label>String: </label>
+         <input id="string" name="instrumentF" type="radio" value="string" onchange="radioDataI();">
+
+         <label>Organ: </label>
+         <input id="organ" name="instrumentF" type="radio" value="organ" onchange="radioDataI();">
+
+         <label>Other: </label>
+         <input id="otherI" name="instrumentF" type="radio" value="other" onchange="radioDataI();">
+      </div>
+
+      <div>
+         <label>Location: </label>
+             <select name="location" id="locationId" onchange="getLocation();">
+               <option name="location" value="Romney">Romney</option>
+               <option name="location" value="Benson">Benson</option>
+               <option name="location" value="Library">Library</option>
+               <option name="location" value="Snow">Snow</option>
+               <option name="location" value="Spori">Spori</option>
+               <option name="location" value="STC">STC</option>
+               <option name="location" value="Clark">Clark</option>
+               <option name="location" value="Taylor">Taylor</option>
+               <option name="location" value="Austin">Austin</option>
+               <option name="location" value="Kirkham">Kirkham</option>
+               <option name="location" value="Rigby">Rigby</option>
+               <option name="location" value="Kimball">Kimball</option>
+               <option name="location" value="Ricks">Ricks</option>
+            </select>
+         <label>Room Number: </label>
+            <select name="roomNumber" id="roomNumberId" onchange="getRoomNumber();">
+               <option name="roomNumber" value="148">148</option>
+               <option name="roomNumber" value="152">152</option>
+               <option name="roomNumber" value="213">213</option>
+               <option name="roomNumber" value="256">256</option>
+               <option name="roomNumber" value="287">287</option>
+               <option name="roomNumber" value="299">299</option>
+               <option name="roomNumber" value="306">306</option>
+            </select>
+         <label>Time Slot: </label>
+            <select name="timeSlot" id="slotTime" onchange="getTime();">
+               <option name="timeSlot" value="9:00 am">9:00 am</option>
+               <option name="timeSlot" value="9:30 am">9:30 am</option>
+               <option name="timeSlot" value="10:00 am">10:00 am</option>
+               <option name="timeSlot" value="10:30 am">10:30 am</option>
+               <option name="timeSlot" value="11:00 am">11:00 am</option>
+               <option name="timeSlot" value="11:30 am">11:30 am</option>
+               <option name="timeSlot" value="12:00 pm">12:00 pm</option>
+               <option name="timeSlot" value="12:30 pm">12:30 pm</option>
+               <option name="timeSlot" value="1:00 pm">1:00 pm</option>
+               <option name="timeSlot" value="1:30 pm">1:30 pm</option>
+               <option name="timeSlot" value="2:00 pm">2:00 pm</option>
+               <option name="timeSlot" value="2:30 pm">2:30 pm</option>
+               <option name="timeSlot" value="3:00 pm">3:00 pm</option>
+               <option name="timeSlot" value="3:30 pm">3:30 pm</option>
+               <option name="timeSlot" value="4:00 pm">4:00 pm</option>
+               <option name="timeSlot" value="4:30 pm">4:30 pm</option>
+               <option name="timeSlot" value="5:00 pm">5:00 pm</option>
+               <option name="timeSlot" value="5:30 pm">5:30 pm</option>
+            </select>
+      </div>
+
+      <div>
+         <p class="error" id="fillout"></p>
+      </div>
+
+   <div>
+      <input class="button" id="register" type="button" value="Register" onclick="validate();">
+      <input class="button" id="rButton" type="reset" value="Reset Form" onclick="reset();">
+   </div>
+
+</form>
+
+   <h2>Registered Students</h2>
+   <div>
+      <textarea rows="75" cols="142" id="signedUp1"></textarea>
+   </div>
+
+<script type="text/javascript" src="assign13.js"></script>
+</body>
+</html>

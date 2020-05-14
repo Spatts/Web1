@@ -1,0 +1,48 @@
+body {
+    background-color: #F9F9F9;
+    text-align: center;
+    font-size: 115%;
+    font-family: genuine regular;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin: 3% auto;
+}
+
+header {
+   font-weight: bold;
+   font-size: 250%;
+   color: #8401bc;
+   font-style: oblique;
+}
+
+p:nth-of-type(odd){
+   font-weight: bold;
+   font-size: 150%;
+}
+
+img {
+   width: 55%;
+   max-width: 150%;
+   height: auto;
+}
+
+footer {
+   font-size: 90%;
+}
+
+li a {
+    float: left;
+    color: white;
+    padding: 1.5% 1.5%;
+    text-decoration: none;
+}
+
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+

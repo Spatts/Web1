@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Mortgage Calculator</title>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="stylesheet" type="text/css" href="assign05.css">
+</head>
+<body>
+   <header>Mortage Calculator</header>
+   <form>
+      <div>
+      <label>
+         Annual Percentage Rate:
+         <input id="apr" name="APR" type="text" placeholder="ex: 5.25" required>
+      </label>
+      </div>
+      <div>
+         <label>
+            Loan Term:
+            <input id="year" name="year" type="text" placeholder="ex: 10" required>
+         </label>
+      </div>
+      <div>
+         <label>
+            Loan Amount:
+            <input id="loanAmount" name="loanAmount" type="text" placeholder="ex: 100000" required>
+         </label>
+      </div>
+      <div>
+         <p>
+         Your monthly payment: $<span id="results">0</span>
+         </p>
+      </div>
+      <input class="button" id="calculate" type="button" value="Calculate Payment">
+      <input class="button" id="rButton" type="reset" value="Reset Form">
+   </form> 
+   <script type="text/javascript" src="assign05.js"></script>
+</body>
+</html>

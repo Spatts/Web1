@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+   <meta charset = "utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Game Buy</title>
+   <link rel="stylesheet" type="text/css" href="assign06.css">
+</head>
+<body>
+   <header>The Best Games Around!</header>
+   <form onsubmit="return validate();" onload="check();" onreset="reset();" name="myForm">
+      <div>
+         <label>First Name:</label>
+         <input id="fNameVald" class="textBoxBackground" name="first" type="text" placeholder="Ron" required/>
+         <label>Last Name:</label>
+         <input id="lNameVald" class="textBoxBackground" name="last" type="text" placeholder="Burgundy" required>
+      </div>
+      <div>
+         <label>Address: </label>
+         <textarea name="address" rows="2" cols="50" placeholder="123 Street Road, Big City, CA, 32114" title="It must follow address, city, State, zip" onchange="addressV();" id="addressID" required></textarea>
+         <p class="error" id="checkAddress"></p>
+      </div>
+      <div>
+         <label>Phone Number: </label>
+         <input id="phoneVald" name="phoneNumber" type="text" placeholder="224-123-1111" onchange="phoneV();" title="Must follow the format: XXX-XXX-XXXX" required>
+         <p class="error" id="checkPN"></p>
+      </div>
+   <div class="padding">
+      <p style="text-align: center">Items to Purchase</p>
+      <table>
+         <tr>
+            <th>Item</th>
+            <th>Cost</th>
+            <th>Buy</th>
+         </tr>
+         <tr>
+            <td>Video Game 1</td>
+            <td>$60</td>
+            <td><input name="item" type="checkbox" id="item_1" onclick="check();" value="60"></td>
+         </tr>
+         <tr>
+            <td>Video Game 2</td>
+            <td>$40</td>
+            <td><input name="item" type="checkbox" id="item_2" onclick="check();" value="40"></td>
+         </tr>
+         <tr>
+            <td>Video Game 3</td>
+            <td>$60</td>
+            <td><input name="item" type="checkbox" id="item_3" onclick="check();" value="60"></td>
+         </tr>
+         <tr>
+            <td>Video Game 4</td>
+            <td>$15.50</td>
+            <td><input name="item" type="checkbox" id="item_4" onclick="check();" value="15.50"></td>
+         </tr>
+         <tr>
+            <td>Video Game 5</td>
+            <td>$10.99</td>
+            <td><input name="item" type="checkbox" id="item_5" onclick="check();" value="10.99"></td>
+         </tr>
+         <tr>
+            <td>Video Game DLC</td>
+            <td>$100</td>
+            <td><input name="item" type="checkbox" id="item_6" onclick="check();" value="100"></td>
+         </tr>
+      </table>
+      <p>Total: $<span id="calculate">0.00</span></p>
+   </div>
+   <div>
+      <p>Credit Card Type</p>
+         <label>Visa: </label>
+         <input name="creditCard" type="radio" value="visa" required>
+         <label>American Express: </label>
+         <input name="creditCard" type="radio" value="americanexpress">
+         <label>Mastercard: </label>
+         <input name="creditCard" type="radio" value="mastercard">         
+   </div>
+   <div>
+      <label>Credit Card Number:</label>
+      <input class="textBoxBackground" name="creditNumber" type="text" placeholder="1324582910857302" id="CCN" onchange="ccnV();" title="16 digit number" required>
+      <p class="error" id="checkCCN"></p>
+   </div>
+   <div>
+      <label>Card Expiration Date: </label>
+         <select name="month">
+            <option value="month">01</option>
+            <option value="month">02</option>
+            <option value="month">03</option>
+            <option value="month">04</option>
+            <option value="month">05</option>
+            <option value="month">06</option>
+            <option value="month">07</option>
+            <option value="month">08</option>
+            <option value="month">09</option>
+            <option value="month">10</option>
+            <option value="month">11</option>
+            <option value="month">12</option>
+         </select>
+         <select name="day">
+            <option value="year">2019</option>
+            <option value="year">2020</option>
+            <option value="year">2021</option>
+            <option value="year">2022</option>
+            <option value="year">2023</option>
+            <option value="year">2024</option>
+            <option value="year">2025</option>
+            <option value="year">2026</option>
+          </select>
+   </div>
+   <div>
+      <input class="button" id="submitOrder" type="submit" value="Submit Order">
+      <input class="button" id="rButton" type="reset" value="Reset">
+   </div>
+   </form>
+   <script type="text/javascript" src="assign06.js"></script>
+</body>
+</html>
